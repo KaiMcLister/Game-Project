@@ -3,8 +3,11 @@ function setup() {
 }
 
 function draw(){
-	background(220,100,3);
-  fill("black")
+	background(100,2,255);
+  noStroke();
+  fill(255,2,100);
+  ellipse(350,300,50,50);
+  /*fill("black")
   ellipse(100,100,40,50);
   fill("blue")
   rect(200,200,100,150)
@@ -15,5 +18,5 @@ function draw(){
   rect(500,410,50,100);
   fill("yellow");
   ellipse(400,340,15,15);
-  ellipse(450,340,15,15);
+  ellipse(450,340,15,15);*/
 }
