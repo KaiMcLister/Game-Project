@@ -4,12 +4,14 @@ let balls = [];
 //create a variable to hold your avatar
 let me;
 
-let mySound;
+let mySound1;
 
 function preload() {
   soundFormats('mp3', 'ogg');
-  mySound = loadSound('boing1.mp3');
+  mySound1 = loadSound('bump1.mp3');
+  mySound2 = loadSound('whoosh1.mp3');
 }
+
 
 function setup() {
   createCanvas(500, 400);
@@ -70,16 +72,20 @@ class Avatar {
 	moveMe(){
     if (keyIsDown(UP_ARROW)) { //if you hold the up arrow, move up by speed
        this.y -= this.speed;
+    
     }
 
     if (keyIsDown(DOWN_ARROW)) { // if you hold the down arrow, move down by speed
         this.y += this.speed;
+
     }
     if (keyIsDown(LEFT_ARROW)) { // if you hold the down arrow, move down by speed
         this.x -= this.speed;
+
     }
     if (keyIsDown(RIGHT_ARROW)) { // if you hold the down arrow, move down by speed
         this.x += this.speed;
+
     }
     if (this.x < 0){
       this.x = width/2
@@ -132,8 +138,8 @@ class Ball {
     		if (this.x >= me.x-15 && this.x <= me.x+15 && this.y > me.y-40 && this.y < me.y+40){
       			this.speed = -this.speed;
             this.hit = this.hit + 1
-            mySound.setVolume(0.1);
-            mySound.play();
+            mySound1.setVolume(0.1);
+            mySound1.play();
 
     		}
 
